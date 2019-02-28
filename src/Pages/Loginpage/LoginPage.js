@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+
+import auth from '../../auth'
 import history from '../history';
 import './loginPage.css'
 
@@ -7,30 +8,28 @@ class LoginPage extends Component {
   state={
     todash:false,
   }
-redirect(){
   
-}
-onsubmit(){
+
+async onsubmit(){
   const email = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
+  const password = document.getElementById("password").value; 
   
   const userdetails={
     email:email,
     password:password,
-  }
-  //QUERY CHECKING
-axios.post('BACKEND_API_HERE',userdetails)
- .then((resp)=>{
-   console.log(resp)
-   if(resp.status===200)
-   {
-     console.log("hrer");
+  };
+  if( auth.login_check(userdetails))
+  {
     history.push('/dashboard')
-    
+  }
   
-   }
- })
+} 
+register(){
+  history.push('/Register')
 }
+
+
+
   render() {
    
   
@@ -45,6 +44,7 @@ axios.post('BACKEND_API_HERE',userdetails)
       <input id="password"></input>
       <br/>
       <button onClick={this.onsubmit}>submit</button>
+      <button onClick={this.register}>register</button>
       
       </div>
     );
