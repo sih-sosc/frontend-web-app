@@ -1,6 +1,6 @@
 import history from './Pages/history';
 import axios from 'axios'
-
+const url='http://192.168.43.47:3000/login';
 let Authenticated = false;
 const auth={
 
@@ -8,16 +8,16 @@ const auth={
     login_check(userdetails)
     {
                 //QUERY CHECKING
-      axios.post('http://localhost:7000/login',userdetails)
-            .then((resp,err)=>{
-                console.log(resp)
-            if(resp.status===200)
+            axios.post(url,userdetails)
+            .then((data)=>{
+                console.log(data)
+            if(data.status===200)
             {
-               console.log(resp.statusText);
+               console.log(data.statusText);
                
                 Authenticated=true;
-            
-                return true
+                history.push('/dashboard')
+                
             
                 }
                 else{

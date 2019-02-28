@@ -19,6 +19,7 @@ class LoginPage extends Component {
 
   }
 
+
   handleEmail = function(event) {
     this.setState({
       email: event.target.value
@@ -31,7 +32,7 @@ class LoginPage extends Component {
     })
   }
 
-  onsubmit = async function() {
+ onsubmit = async function() {
     
     const userdetails={
       email: this.state.email,
@@ -50,6 +51,7 @@ class LoginPage extends Component {
   render() {
   
     return (
+
       <div className={styles.loginPage} >
         <div className={styles.card}>
           <h1 >Sign In</h1>
@@ -67,6 +69,8 @@ class LoginPage extends Component {
           <br/>
           <button className={styles.login} onClick={this.onsubmit}>SIGN IN</button>
         </div>      
+
+     
       </div>
     );
   }
