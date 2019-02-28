@@ -10,7 +10,7 @@ class LoginPage extends Component {
   }
   
 
-async onsubmit(){
+ onsubmit(){
   const email = document.getElementById("username").value;
   const password = document.getElementById("password").value; 
   
@@ -18,10 +18,8 @@ async onsubmit(){
     email:email,
     password:password,
   };
-  if( auth.login_check(userdetails))
-  {
-    history.push('/dashboard')
-  }
+   auth.login_check(userdetails);
+ 
   
 } 
 register(){
@@ -37,10 +35,10 @@ register(){
       <div className="main" >
       
       <h1 >login</h1>
-      <text>name</text>
+      name
       <input id="username"></input>
       <br/>
-      <text>Password</text>
+      Password
       <input id="password"></input>
       <br/>
       <button onClick={this.onsubmit}>submit</button>
