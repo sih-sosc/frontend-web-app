@@ -1,0 +1,55 @@
+.loginPage {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 132, 255);
+}
+
+.card {
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow:0 2px 6px 0 rgba(0,0,0,.12);
+}
+
+.card h1 {
+    font-family: "ubuntu";
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 5px;
+}
+
+.card h1::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: rgb(0, 110, 255);
+    display: block; 
+    margin: 20px 0px 20px 0px;
+}
+
+.card input {
+    border: 0;
+    padding: 15px 5px 15px 5px;
+    border-bottom: 1px solid rgb(0, 132, 255);
+    margin: 5px;
+}
+
+.login {
+    border: 0;
+    padding: 15px;
+    margin: 5px;
+    background-color: rgb(0, 132, 255);
+    color: white;
+    border-radius: 2px;
+}
