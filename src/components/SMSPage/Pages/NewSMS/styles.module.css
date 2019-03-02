@@ -1,0 +1,93 @@
+.SMSEditorPage {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.dropDown {
+    background-color: white;
+    border: 0;
+    border-bottom: 2px solid #0077ff;
+    padding: 15px;
+    margin: 10px;
+}
+
+.dropDown:hover {
+    background-color: #78b4f836;
+    cursor: pointer;
+}
+
+.dropDown option {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+}
+
+.SMSEditor {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px solid #eeeeee;
+    background-color: #eeeeee;
+    border-radius: 3px;
+}
+
+.SMSEditor input {
+
+    border: 0;
+    border: 1px solid #eeeeee;
+    border-radius: 3px;
+    padding: 15px;
+    margin: 10px;
+    width: 600px;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.12);
+}
+
+.SMSEditor textarea {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #eeeeee;
+    height: 250px;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.12);
+}
+
+.SMSEditor textarea::placeholder {
+    color: #b8b8b8;
+    line-height: 2em;
+}
+
+.space {
+    flex-grow: 1;
+    flex-basis: 1;
+}
+
+.buttonRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button {
+    background: rgb(1, 206, 69);  /* fallback for old browsers */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 0;
+    margin: 10px;
+}
+
+.button:hover {
+    box-shadow: 0 2px 6px 0 rgba(1, 209, 29, 0.438);
+    cursor: pointer;
+}
+
+.SMSLimit {
+    padding: 15px;
+    color: #3b3b3b;
+}
