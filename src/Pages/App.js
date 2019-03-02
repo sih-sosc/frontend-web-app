@@ -10,7 +10,7 @@ import {Router, Route } from 'react-router-dom'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChartLine, faEnvelopeOpen, faSms, faUsers, faPuzzlePiece, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import { faChartLine, faEnvelopeOpen, faSms, faUsers, faPuzzlePiece, faPlusCircle, faLock, faLink } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faChartLine)
 library.add(faEnvelopeOpen)
@@ -18,6 +18,8 @@ library.add(faSms)
 library.add(faUsers)
 library.add(faPuzzlePiece)
 library.add(faPlusCircle)
+library.add(faLock)
+library.add(faLink)
 
 class App extends Component {
   render() {
