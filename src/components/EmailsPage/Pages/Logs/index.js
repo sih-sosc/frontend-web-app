@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Styles from './styles.module.css';
-
+import axios from 'axios';
 class LogsPage extends Component {
 
     constructor(props) {
@@ -36,6 +36,19 @@ class LogsPage extends Component {
 
 
     getLogRows = () => {
+        var token= localStorage.getItem('token');
+        console.log(token);
+      axios.request({
+            method:"POST",
+            url:"http://172.17.104.204:3000/logs",
+          
+          data:{token},
+         
+
+              })
+      .then((logData)=>{
+          console.log(logData);
+      })
         let rows = [];
 
         for (let item in this.logData) {

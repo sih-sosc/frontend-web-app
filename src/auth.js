@@ -2,6 +2,7 @@ import history from './Pages/history';
 import axios from 'axios'
 const url='http://172.17.104.204:3000/login';
 let Authenticated = false;
+
 const auth={
 
     
@@ -13,12 +14,14 @@ const auth={
                 console.log(data)
             if(data.status===200)
             {
-               console.log(data.statusText);
                
+               console.log(data.statusText);
+               localStorage.setItem('token' , data.data.token);
+               var token= localStorage.getItem('token');
+               console.log(token);  
                 Authenticated=true;
                 history.push('/dashboard')
-                
-            
+               
                 }
                 else{
                     console.log("not a user");
