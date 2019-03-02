@@ -3,7 +3,7 @@ import NavBar from '../Navbar';
 import Styles from './styles.module.css'
 import ShowArea from '../ShowArea'
 
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Dashboard extends Component {
 
@@ -13,6 +13,7 @@ class Dashboard extends Component {
 
    
     this.items = ["Dashboard", "Emails", "SMS", "Contacts", "Services"];
+    this.icons = ["chart-line", "envelope-open", "sms", "users", "puzzle-piece"]
 
     this.state = {
       currentPage: 0,
@@ -37,10 +38,10 @@ class Dashboard extends Component {
 
     for (let item in this.items) {
       if (item === this.state.currentPage || this.firstLoad) {
-        items.push(<li onClick={()=>{ this.changePage(item)}} className={Styles.active}>{ this.items[item] }</li>)
+        items.push(<li onClick={()=>{ this.changePage(item)}} className={Styles.active}><FontAwesomeIcon icon={ this.icons[item]} /><span className={Styles.space}/>{ this.items[item] }</li>)
         this.firstLoad = false;
       } else {
-        items.push(<li onClick={()=>{ this.changePage(item)}} >{ this.items[item] }</li>)
+        items.push(<li onClick={()=>{ this.changePage(item)}} ><FontAwesomeIcon icon={ this.icons[item]} /><span className={Styles.space}/>{ this.items[item] }</li>)
       }
     }
     return items;

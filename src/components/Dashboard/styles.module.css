@@ -18,29 +18,33 @@
   text-decoration: none;
   margin: 0;
   padding: 25px 0 0 0;
-  border-right: 1px solid #c0c0c0;
-  width: 250px;
+  border-right: 1px solid #eeeeee;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,.12);
+  width: 280px;
 }
 
 .sideNav li {
-  padding: 15px;
+  padding: 15px 20px 15px 20px;
   width: auto;
-  text-align: center;
+  text-align: left;
   font-size: 1.2em;
   color: #5f5f5f;
 }
 
 .sideNav li:hover {
   color: #0077ff;
-  font-weight: bold;
   cursor: pointer;
 }
 
 li.active {
   color: #0077ff;
-  font-weight: bold;
+  background-color: #8ec0fa44;
 }
 
 .tabLayout {
   display: flex;
+}
+
+.space {
+  padding: 20px;  
 }
