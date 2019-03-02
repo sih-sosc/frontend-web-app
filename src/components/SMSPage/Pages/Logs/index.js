@@ -8,26 +8,20 @@ class LogsPage extends Component {
 
         this.logData = [
             {
-                by: "Afroz Hussain",
+                by: "Rumaan Khalandar",
                 to: "AICTE Admins",
                 date: "21/01/2019 20:23",
                 status: "sent"
             },
             {
-                by: "Ryan Nathaniel Mathew",
+                by: "Akashdeep Bhagat",
                 to: "Admission department",
                 date: "21/01/2019 20:23",
                 status: "sent"
             },
             {
-                by: "Musthaq Ahamad",
+                by: "Basawarajeshwari",
                 to: "Department CSE",
-                date: "21/01/2019 20:23",
-                status: "sent"
-            },
-            {
-                by: "Rumaan Khalander",
-                to: "Electronics Department",
                 date: "21/01/2019 20:23",
                 status: "sent"
             },

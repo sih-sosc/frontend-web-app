@@ -68,7 +68,7 @@ render() {
                 <div className={Styles.space}></div>
                 <select onChange={this.onSchedule} className={Styles.dropDown}>
                     <option vlaue="right_now">Send Right Now</option>
-                    <option value="schedule">Schedule Email</option>
+                    <option value="schedule">Schedule SMS</option>
                 </select>
                 {this.state.schedule === "schedule" ? this.getDatePicker() : <div />}
                 <button className={Styles.button}>Send Mail</button>
