@@ -1,48 +1,30 @@
-import history from './Pages/history';
-import axios from 'axios'
-const url='http://172.17.104.204:3000/login';
+import history from "./Pages/history";
+import axios from "axios";
+const url = "http://172.17.104.204:3000/login";
 let Authenticated = false;
-const auth={
+const auth = {
+  login_check(userdetails) {
+    //QUERY CHECKING
+    axios.post(url, userdetails).then(data => {
+      console.log(data);
+      if (data.status === 200) {
+        console.log(data.statusText);
 
-    
-    login_check(userdetails)
-    {
-                //QUERY CHECKING
-            axios.post(url,userdetails)
-            .then((data)=>{
-                console.log(data)
-            if(data.status===200)
-            {
-               console.log(data.statusText);
-               
-                Authenticated=true;
-                history.push('/dashboard')
-                
-            
-                }
-                else{
-                    console.log("not a user");
-                }
-         })
-            },
-    
+        Authenticated = true;
+        history.push("/dashboard");
+      } else {
+        console.log("not a user");
+      }
+    });
+  },
 
-        isAuthenticated(){
-            if(Authenticated===true)
-            {
-                return true;
-            }
-            else{
-                return false    ;
-            }
-            
-        }, 
-
+  isAuthenticated() {
+    if (Authenticated === true) {
+      return true;
+    } else {
+      return false;
     }
+  }
+};
 
-export default auth;    
-
-
-
-
-
+export default auth;

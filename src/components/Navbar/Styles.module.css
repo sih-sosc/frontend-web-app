@@ -1,50 +1,48 @@
-
-.NavBar{
-    display: flex;
-    flex-direction: row;
-    background: #425cee;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 45px;
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  background: #425cee;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 45px;
 }
-  
-h2{
-    display: inline;
-    color: #f1ebeb;
-    font-family: 'Trebuchet MS', Arial, sans-serif;
-    margin: 5px;
-  }
-  
-  
-  .NavBar a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-  }
-  
-  .Navbar li a:hover:not(.active) {
-    background-color: #111;
-  }
-  
-  .ProfilePic{
-    background: #eeeeee;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-  }
-  .MyProfile{
-    display: flex;
-    flex-direction: row; 
-    justify-content: flex-end;
-  }
-  .MyName{
-    background: #2c40b1;
-    color: white;
-    text-decoration: none;
-    border-radius: 0px 20px 20px 0px;
-  }
-  .MyName:hover:not(.active) {
-    background-color: #eeeeee;
-    color: #425cee;
-  }
+
+h2 {
+  display: inline;
+  color: #f1ebeb;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  margin: 5px;
+}
+
+.NavBar a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.Navbar li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.ProfilePic {
+  background: #eeeeee;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+.MyProfile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.MyName {
+  background: #2c40b1;
+  color: white;
+  text-decoration: none;
+  border-radius: 0px 20px 20px 0px;
+}
+.MyName:hover:not(.active) {
+  background-color: #eeeeee;
+  color: #425cee;
+}

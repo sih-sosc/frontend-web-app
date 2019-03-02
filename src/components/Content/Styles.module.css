@@ -1,63 +1,63 @@
-.Content{
-    width: 100%;
-    background: #ffffff;
-  }
-  .ContentNav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .ContentNavLeft{
-    display: flex;
-    flex-direction: row; 
-  }
-  .ContentNav ul{
-    box-shadow: 0px 2px 5px #e5e8fc;
-    padding: 20px 20px 10px 20px; 
-    background: white;
-    display: flex;
-    flex-direction: row;
-    width: 600px;
-  }
-  
-  .ContentNav li{
-    display: flex;
-    flex-direction: row;
-  }
-  .ContentNav li a{
-    color: #111;
-    text-decoration: none;
-    padding: 5px 0px;
-  }
-  .ContentNav a:hover:not(.active) {
-    color: #425cee;
-  }
-  
-  .NewCampaign {
-    background: #425cee;
-    color: white;
-    float: right;
-    padding: 10px;
-    font-size: 11px;
-    text-decoration: none;
-    border-radius: 20px;
-    height: flex;
-  }
-  
-  .NewCampaign:hover:not(.active) {
-    background: #f1ebeb;
-  }
-  
-  .NumberCircle{
-    background: #425cee;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    display: inline-block;
-    font-size: 17px;
-    color: white;
-  }
-  .logHead{
+.Content {
+  width: 100%;
+  background: #ffffff;
+}
+.ContentNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.ContentNavLeft {
+  display: flex;
+  flex-direction: row;
+}
+.ContentNav ul {
+  box-shadow: 0px 2px 5px #e5e8fc;
+  padding: 20px 20px 10px 20px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+}
+
+.ContentNav li {
+  display: flex;
+  flex-direction: row;
+}
+.ContentNav li a {
+  color: #111;
+  text-decoration: none;
+  padding: 5px 0px;
+}
+.ContentNav a:hover:not(.active) {
+  color: #425cee;
+}
+
+.NewCampaign {
+  background: #425cee;
+  color: white;
+  float: right;
+  padding: 10px;
+  font-size: 11px;
+  text-decoration: none;
+  border-radius: 20px;
+  height: flex;
+}
+
+.NewCampaign:hover:not(.active) {
+  background: #f1ebeb;
+}
+
+.NumberCircle {
+  background: #425cee;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  font-size: 17px;
+  color: white;
+}
+.logHead {
   box-shadow: 0px 1px 3px 1px #dcdff1;
   padding: 5px;
   display: list-item;
@@ -65,4 +65,4 @@
   color: #111111dc;
   text-align: center;
   text-decoration: none;
-  }
+}
