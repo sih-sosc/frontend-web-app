@@ -2,7 +2,10 @@
 .NavBar{
     display: flex;
     flex-direction: row;
-    background: red;
+    background: #425cee;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 45px;
 }
   
 h2{
@@ -12,14 +15,9 @@ h2{
     margin: 5px;
   }
   
-  .NavBar li {
-    float: right;
-  }
   
-  .NavBar li a {
-    display: block;
+  .NavBar a {
     color: white;
-    text-align: center;
     padding: 10px;
     text-decoration: none;
   }
@@ -42,6 +40,8 @@ h2{
   }
   .MyName{
     background: #2c40b1;
+    color: white;
+    text-decoration: none;
     border-radius: 0px 20px 20px 0px;
   }
   .MyName:hover:not(.active) {
