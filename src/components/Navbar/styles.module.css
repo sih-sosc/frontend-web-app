@@ -1,0 +1,34 @@
+
+.NavBar{
+    display: flex;
+    flex-direction: row;
+    background: #0099ff;
+    padding: 15px;
+    align-items: center;
+}
+  
+h2{
+    display: inline;
+    color: #f1ebeb;
+    font-family: 'Ubuntu', Arial, sans-serif;
+    margin: 5px;
+    font-size: 1.2em;
+    padding: 0px 0px 0px 50px;
+  }
+  
+  .NavBar li {
+    float: right;
+  }
+  
+  .NavBar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .Navbar li a:hover:not(.active) {
+    background-color: #111;
+  }
+  

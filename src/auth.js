@@ -1,6 +1,6 @@
 import history from './Pages/history';
 import axios from 'axios'
-const url='http://192.168.43.47:3000/login';
+const url='http://172.17.104.204:3000/login';
 let Authenticated = false;
 const auth={
 

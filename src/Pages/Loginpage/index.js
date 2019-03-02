@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import auth from '../../auth'
 import history from '../history';
-import styles from './loginPage.module.css'
+import styles from './Styles.module.css'
 
 class LoginPage extends Component {
 
