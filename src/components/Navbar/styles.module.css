@@ -5,6 +5,7 @@
     background: #0099ff;
     padding: 15px;
     align-items: center;
+    justify-content: space-between;
 }
   
 h2{

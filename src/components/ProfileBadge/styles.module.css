@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #ababab;
+    height: auto;
+    width: 170px;
+    border-radius: 50px;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .profileName {
+    text-align: center;
+    font-size: 1em;
+    padding: 10px;
+  }
+  
+  .profileAvatar {
+    border-radius: 100%;
+    background-color: red;
+    /* border: 2px solid white; */
+    width: 55px;
+    height: 55px;
+    object-fit: fill;
+    background: url("https://fakepersongenerator.com/Face/female/female20151024376792816.jpg");
+  }
+  
+  /* #0077ff */
+  
