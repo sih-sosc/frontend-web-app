@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import Styles from './Styles.module.css'
 class LeftNav extends Component {
   render() {
     return (
-    <div className="LeftNav">
+    <div className={Styles.LeftNav}>
       <ul>
         <li>Dashboard</li>
         <li>E-mail</li>

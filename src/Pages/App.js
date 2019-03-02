@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import LoginPage from './Loginpage/LoginPage';
-import Dashboard from '../Pages/Dashboard'
+import LoginPage from './Loginpage';
+import Dashboard from '../components/Dashboard'
 import './App.css';
 import Register from './register'
 import {ProtectedRoute} from './ProtectdRoute'
@@ -15,7 +15,7 @@ class App extends Component {
      <div>
      
         <Route path={"/"}  component={LoginPage} exact />
-        <ProtectedRoute path={"/dashboard"}  component={Dashboard} />
+        <Route path={"/dashboard"}  component={Dashboard} />
         <Route path={"/Register"}  component={Register} />
         </div>
      </Router>
