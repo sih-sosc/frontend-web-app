@@ -1,6 +1,6 @@
 import history from './Pages/history';
 import axios from 'axios'
-const url='http://192.168.43.47:3000/login';
+const url='http://172.17.104.204:3000/login';
 let Authenticated = false;
 const auth={
 
@@ -14,9 +14,13 @@ const auth={
             if(data.status===200)
             {
                console.log(data.statusText);
-               
+               localStorage.setItem('token' , data.data.token);
+               if(localStorage.hasOwnProperty('token')){
+               var token= localStorage.getItem('token');
+               alert(token);
+                }
                 Authenticated=true;
-                history.push('/dashboard')
+                history.push('/dashboard');
                 
             
                 }
