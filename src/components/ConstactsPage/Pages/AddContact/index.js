@@ -53,9 +53,11 @@ class ContactList extends Component {
       if (err) {
         console.log(err);
       }
+
       else {
 
        setContactList(resp.rows);
+
 
       }
     });
