@@ -15,9 +15,9 @@ fileHandler(event) {
       else{
         
         console.log(resp);
-    //     const  merged = [].concat.apply([], data);
-    //     console.log(merged);
-    //    document.getElementById("mails").value= data;
+        //     const  merged = [].concat.apply([], data);
+        //     console.log(merged);
+        //    document.getElementById("mails").value= data;
         
       }
     });
