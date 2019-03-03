@@ -86,7 +86,7 @@ class ContactList extends Component {
     var token= localStorage.getItem('token');
      axios.request({
         method:"POST",
-        url:"http://172.17.104.204:3000/contacts/all",
+        url:"http://172.17.104.204:3000/contact_list/all",
       
       data:{token},
      

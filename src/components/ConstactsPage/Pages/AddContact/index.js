@@ -69,17 +69,16 @@ class ContactList extends Component {
       <div>
 
         <div>
-          <div>Add Contact List</div>
-          <div>
+          <div className={Styles.title}>Add Contact List</div>
+          <div className={Styles.inputtabs}>
             Name
-            <input id="name" onChange={this.handlename}></input>
+            <input className={Styles.nameinput} id="name" onChange={this.handlename}></input>
           </div>
           <input id="mails" ></input>
           <input type="file" onChange={ (e) => {this.fileHandler(e, this.setContactList)}} style={{ "padding": "10px" }} />
           {this.state.ContactList !== null ? this.sendContact() : <div />}
         </div>
-        <button>Add ContactList</button>
-
+        
       </div>
     )
 

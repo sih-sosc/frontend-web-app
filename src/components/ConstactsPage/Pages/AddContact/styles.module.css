@@ -1,0 +1,7 @@
+.inputtabs{
+    width: 500px;
+    justify-content: right;
+    display: flex;
+    flex-direction: row;
+}
+
