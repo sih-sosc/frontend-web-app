@@ -1,0 +1,37 @@
+.logs {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.logTable {
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+}
+
+.logTable thead {
+    background-color: #8ec0fa44;
+    padding: 15px;
+}
+
+.logTable thead tr th {
+    padding: 15px;
+    color: #0077ff;
+}
+
+.logTable tbody tr:hover {
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+}
+
+.logTable tbody tr td {
+    padding: 15px;
+    text-align: center;
+    color: #4e4e4e;
+}
+
+.logTable tr {
+    border-bottom: 1px solid #eeeeee;
+}

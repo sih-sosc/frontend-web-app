@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import Styles from './styles.module.css';
 
+
 // pages
+import ServiceGrid from './Pages/ServicesGrid'
+import AddNewService from './Pages/AddNewService'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class ServicesPage extends Component {
 
@@ -24,12 +29,16 @@ class ServicesPage extends Component {
         console.log(this.state.currentTab);
         for (let tab in this.tabItems) {
             if (tab === this.state.currentTab || this.firstLoad) {
-                tabs.push(<li onClick={() => { this.changeTab(tab) }} className={Styles.active}>{this.tabItems[tab]}</li>)
+                if (tab == this.tabItems.length-1) {
+                    tabs.push(<li onClick={() => { this.changeTab(tab) }} className={Styles.active}><FontAwesomeIcon icon="plus-circle" /><span className="tabSpace" />{this.tabItems[tab]}</li>)
+                } else
+                    tabs.push(<li onClick={() => { this.changeTab(tab) }} className={Styles.active}>{this.tabItems[tab]}</li>)
                 this.firstLoad = false;
             } else {
-
-
-                tabs.push(<li onClick={() => { this.changeTab(tab) }} >{this.tabItems[tab]}</li>)
+                if (tab == this.tabItems.length-1) {
+                    tabs.push(<li onClick={() => { this.changeTab(tab) }} ><FontAwesomeIcon icon="plus-circle" /><span className="tabSpace" />{this.tabItems[tab]}</li>)
+                } else
+                    tabs.push(<li onClick={() => { this.changeTab(tab) }} >{this.tabItems[tab]}</li>)
             }
         }
 
@@ -42,8 +51,17 @@ class ServicesPage extends Component {
         })
     }
 
+    getCurrentPage() {
+        if (this.state.currentTab == 0) {
+            return <ServiceGrid/>
+        } else if (this.state.currentTab == 1) {
+            return <AddNewService/>
+        }
+    }
+
     render() {
         return (
+            <>
             <div className={Styles.tabslayout}>
                 <div className={Styles.tabs}>
                     <ul>
@@ -51,6 +69,10 @@ class ServicesPage extends Component {
                     </ul>
                 </div>
             </div>
+            <div className={Styles.pages}>
+                { this.getCurrentPage() }
+            </div>
+            </>
         )
     }
 }

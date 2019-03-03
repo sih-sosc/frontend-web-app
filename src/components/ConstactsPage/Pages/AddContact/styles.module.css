@@ -1,0 +1,42 @@
+.page{
+    margin-left: 100px;
+}
+.title{
+    margin: 25px;
+    margin-left: 0px; 
+    font-size: 25px;
+    color: #0077ff;
+}
+.dash{
+    margin-top: 4px;
+    margin-left: 2px; 
+    width: 100px;
+    border-bottom: 2px solid #0077ff;
+}
+.inputtabs{
+    font-size: 18px;
+    margin: 30px 10px;
+    color: #0077ff;
+}
+.nameinput{
+    padding: 10px;
+    margin: 10px 10px 10px 60px;
+    border: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.12);
+}
+
+.uploadyourfile{
+    margin-top: 12px;
+    margin-left: 2px; 
+}
+.fileinput{
+    margin: 10px 10px 10px 60px;
+}
+.button{
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 0;
+    margin: 0px;
+}
+

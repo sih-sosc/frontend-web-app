@@ -8,10 +8,12 @@ class DashboardPage extends Component {
     constructor(props) {
         super(props);
 
-        this.tabItems = ["Logs", "Schedules", "New EmailCampaign"];
+        this.tabItems = ["Logs", "Schedules"];
         this.state = {
 
         }
+        
+
     }
 
     render() {
@@ -21,7 +23,7 @@ class DashboardPage extends Component {
                     <ul>
                         <li>Logs</li>
                         <li>Schedules</li>
-                        <li>New Email Campaign</li>
+                        
                     </ul>
                 </div>
             </div>

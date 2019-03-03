@@ -1,4 +1,4 @@
-.emailEditorPage {
+.serviceEditorPage {
     display: flex;
     flex-direction: column;
 }
@@ -6,6 +6,9 @@
 .flexRow {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    color: #0077ff;
 }
 
 .dropDown {
@@ -27,7 +30,7 @@
     margin: 10px;
 }
 
-.emailEditor {
+.serviceEditor {
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -36,7 +39,7 @@
     border-radius: 3px;
 }
 
-.emailEditor input {
+.serviceEditorInput {
 
     border: 0;
     border: 1px solid #eeeeee;
@@ -48,7 +51,7 @@
     box-shadow: 0 2px 6px 0 rgba(0,0,0,.12);
 }
 
-.emailEditor textarea {
+.serviceEditor textarea {
     padding: 15px;
     margin: 0px 10px 10px 10px;
     border: 1px solid #eeeeee;
@@ -57,7 +60,7 @@
     box-shadow: 0 2px 6px 0 rgba(0,0,0,.12);
 }
 
-.emailEditor textarea::placeholder {
+.serviceEditor textarea::placeholder {
     color: #b8b8b8;
     line-height: 2em;
 }
@@ -71,6 +74,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 30px;
 }
 
 .button {
@@ -81,10 +85,7 @@
     border: 0;
     margin: 10px;
 }
-.schedule{
-    display: flex;
-    flex-direction: row;
-}
+
 .button:hover {
     box-shadow: 0 2px 6px 0 rgba(1, 209, 29, 0.438);
     cursor: pointer;
