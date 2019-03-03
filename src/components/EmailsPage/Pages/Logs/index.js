@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Styles from './styles.module.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 class LogsPage extends Component {
 
     constructor(props) {
@@ -79,7 +80,7 @@ class LogsPage extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        { this.getLogRows() }
+                        <Link to="/logs/24">{ this.getLogRows() }</Link>
                     </tbody>
                 </table>
             </div>

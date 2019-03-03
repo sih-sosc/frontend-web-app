@@ -102,6 +102,14 @@ class ContactList extends Component {
           
        
 }
+// removecontactlist(name){
+//     var token = localStorage.getItem('token');
+//     axios.delete(`http://172.17.104.204:3000/contact_list/${name}`,{
+//     data:{"token":token,
+
+//     }
+//     });
+// }
 showcontacts(){
     let rows =this.state.contacts
     let contacts=[]
@@ -110,11 +118,13 @@ showcontacts(){
             let log = rows[item];
             contacts.push(
                 <tr>
+                    
                     <td>{log.id}</td>
                     <td>{log.name}</td>
                     <td>{log.created_by}</td>
                     <td>{log.created_at}</td>
                     <td>{log.total_contacts}</td>
+                    <button className={Styles.button}>X</button>
                 </tr>
             )
         }

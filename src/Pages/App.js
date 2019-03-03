@@ -4,6 +4,7 @@ import Dashboard from '../components/Dashboard'
 import './App.css';
 import Register from './register'
 import {ProtectedRoute} from './ProtectdRoute'
+import LogsRoute from '../components/LogsRoute'
 import history from './history';
 
 import {Router, Route } from 'react-router-dom'
@@ -29,7 +30,7 @@ class App extends Component {
      
         <Route path={"/"}  component={LoginPage} exact />
         <Route path={"/dashboard"}  component={Dashboard} />
-        <Route path={"/Register"}  component={Register} />
+        <Route path={"/logs/:id"}  component={LogsRoute} />
         </div>
      </Router>
     )  

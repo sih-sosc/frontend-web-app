@@ -68,17 +68,17 @@ class NewEmailsPage extends Component {
     showcontacts() {
         let rows = this.state.contacts
         let contacts = []
-        // for (let item in rows) {
-        //    let name = rows[item];
-        //     contacts.push(
-        //         <option>rows[item].name</option>
-        // }r
+        //  for (let item in rows) {
+        //    let log= rows[item];
+        //    contacts.push(
+        //      <option>log.name</option>)
+        // }
         rows.forEach(element => {
             contacts.push(<option>{element.name}</option>)
         });
         return (<select className={Styles.dropDown}>
             <option disabled selected>Choose Contact List</option>
-            <option>Sample List</option>
+            {contacts}
 
         </select>)
 
@@ -135,7 +135,7 @@ class NewEmailsPage extends Component {
                         <option>Server2 Mumbai</option>
                         <option>Server3 Hyderabad</option>
                     </select>
-                    {this.state.contacts == null ? this.getcontacts() : this.showcontacts()}
+                    {this.state.contacts === null ? this.getcontacts() : this.showcontacts()}
 
                 </div>
                 <div className={Styles.emailEditor}>

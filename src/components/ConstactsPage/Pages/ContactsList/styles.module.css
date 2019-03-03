@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 0;
+    width: 100%;
     margin: 0;
 }
 
@@ -34,4 +35,12 @@
 
 .logTable tr {
     border-bottom: 1px solid #eeeeee;
+}
+.button{
+    border-radius: 5px;
+    border-block-end-style: none;
+    border-color: none;
+    margin-top:12px; 
+    
+
 }
