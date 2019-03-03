@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Styles from './styles.module.css';
 import DateTimePicker from 'react-datetime-picker';
+import ContactList from '../../../ConstactsPage/Pages/AddContact';
 import axios from 'axios'
 
 // pages
@@ -13,65 +14,17 @@ class NewEmailsPage extends Component {
         this.state = {
             date: new Date(),
             schedule: "right_now",
-            contacts:null,
-            Emailboady:"",
-            EmailSub:"",
+            contacts: null,
+            emailbody: "",
+            emialsubject: "",
         }
 
         this.emailBodyPlaceholder = `
         Type in your Email Body here...
         User "{{contact_name}}" (without quotes) to template the name of the recipient.
         Additionally you can user {{mobile_number}} and {{email_address}} for templating.
-        
         `
-      
     }
-   
-    getcontacts(){
-        var token= localStorage.getItem('token');
-         axios.request({
-            method:"POST",
-            url:"http://172.17.104.204:3000/contact_list/all",
-          
-          data:{token},
-         
-    
-              })
-              .then((resp)=>{
-               // console.log(resp.data);
-                this.setState({
-                  contacts:resp.data,
-                })
-    
-              })
-              
-           
-    }
-    showcontacts(){
-        let rows =this.state.contacts
-        let contacts=[]
-       
-            for (let item in rows) {
-                let log = rows[item];
-                contacts.push(
-                   
-                        
-                        <option value={log.name}>{log.name}</option>
-                        
-                   
-                )
-            }
-            return (
-                <select className={Styles.dropDown}>
-                    <option disabled selected>Choose Contact List</option>
-                    {contacts}
-                </select>
-            )
-           
-    
-    }
-
-  
 
     onChange = date => this.setState({ date })
 
@@ -85,18 +38,64 @@ class NewEmailsPage extends Component {
             />
         );
     }
-    sendmail(){
-        axios.get('http://172.17.104.204:8080/send');
-        console.log("here")
-        
-    }
-    // setEmailBody(e){
-    //     this.setState({
-    //         Emailboady:e.target.value
-    //     })
 
-    // }
-    
+
+    getcontacts() {
+        var token = localStorage.getItem('token');
+        axios.request({
+            method: "POST",
+            url: "http://172.17.104.204:3000/contact_list/all",
+
+            data: { token },
+
+
+        })
+            .then((resp) => {
+                console.log(resp.data);
+                this.setState({
+                    contacts: resp.data,
+                })
+
+            })
+
+
+    }
+    showcontacts() {
+        let rows = this.state.contacts
+        let contacts = []
+        // for (let item in rows) {
+        //    let name = rows[item];
+        //     contacts.push(
+        //         <option>rows[item].name</option>
+        // }r
+        rows.forEach(element => {
+            contacts.push(<option>{element.name}</option>)
+        });
+        return (<select className={Styles.dropDown}>
+            <option disabled selected>Choose Contact List</option>
+            <option>Sample List</option>
+
+        </select>)
+
+
+    }
+    sendEmail() {
+        let emailbody = `
+            <html>
+                <p>
+                    ${this.state.emailbody}
+                </p>
+                <img src="http://172.17.104.204:3000/track/2323/1121" alt="Sent by AICTE" />
+            </html>
+        `;  
+        let emailsubject = this.state.emailsubject;
+        var token = localStorage.getItem('token');
+        axios.get("http://172.17.104.204:8080/send");
+        console.log("email body");
+        console.log(emailbody);
+    }
+
+
     render() {
         return (
             <div className={Styles.emailEditorPage}>
@@ -107,17 +106,17 @@ class NewEmailsPage extends Component {
                         <option>Server2 Mumbai</option>
                         <option>Server3 Hyderabad</option>
                     </select>
-                    {this.state.contacts==null ? this.getcontacts():this.showcontacts()}
+                    {this.state.contacts == null ? this.getcontacts() : this.showcontacts()}
+
                 </div>
                 <div className={Styles.emailEditor}>
-                    <input type="text" placeholder="Subject of the Email" 
-                    onChange={this.setEmailBody} />
-                    <textarea  placeholder={this.emailBodyPlaceholder} onChange={(e)=>{
+                    <input type="text" placeholder="Subject of the Email" />
+                    <textarea placeholder={this.emailBodyPlaceholder} onChange={(e) => {
                         this.setState({
-                            Emailboady:e.target.value,
-                        })
+                            emailbody: e.target.value,
 
-                    }}></textarea>
+                        })
+                    }} />
                 </div>
                 <div className={Styles.buttonRow}>
                     <div className={Styles.space}></div>
@@ -125,8 +124,8 @@ class NewEmailsPage extends Component {
                         <option vlaue="right_now">Send Right Now</option>
                         <option value="schedule">Schedule Email</option>
                     </select>
-                    { this.state.schedule === "schedule" ? this.getDatePicker() : <div/> }
-                    <button className={Styles.button} onClick={this.sendmail()}>Send Mail</button>
+                    {this.state.schedule === "schedule" ? this.getDatePicker() : <div />}
+                    <button className={Styles.button} onClick={() => {this.sendEmail()}}   >Send Mail</button>
                 </div>
             </div>
         );

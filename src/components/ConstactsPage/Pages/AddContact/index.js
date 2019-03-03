@@ -35,7 +35,7 @@ class ContactList extends Component {
       url: "http://172.17.104.204:3000/contact_list/new",
 
       data: { 'token':token,
-              'listName':contactdetails.name,
+              'name':contactdetails.name,
               'data':contactdetails.contacts,
                },
 
