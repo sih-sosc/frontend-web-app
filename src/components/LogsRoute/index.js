@@ -9,7 +9,7 @@ class LogsRoute extends Component {
 
     render() {
         return(
-            <h1>{ this.props.match.params.id } Hello</h1>
+            <h1>{ this.props.match.params.id }</h1>
         )
     }
 }

@@ -37,10 +37,14 @@ class NewEmailsPage extends Component {
 
     getDatePicker = () => {
         return (
+            <div className={Styles.schedule}>
             <DateTimePicker
                 onChange={this.onChange}
                 value={this.state.date}
             />
+           
+            <input placeholder="Job Name"></input>
+            </div>
         );
     }
 

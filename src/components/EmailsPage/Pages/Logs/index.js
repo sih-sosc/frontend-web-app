@@ -8,30 +8,30 @@ class LogsPage extends Component {
         super(props)
 
         this.logData = [
-            {
-                by: "Afroz Hussain",
-                to: "AICTE Admins",
-                date: "21/01/2019 20:23",
-                status: "sent"
-            },
-            {
-                by: "Ryan Nathaniel Mathew",
-                to: "Admission department",
-                date: "21/01/2019 20:23",
-                status: "sent"
-            },
-            {
-                by: "Musthaq Ahamad",
-                to: "Department CSE",
-                date: "21/01/2019 20:23",
-                status: "sent"
-            },
-            {
-                by: "Rumaan Khalander",
-                to: "Electronics Department",
-                date: "21/01/2019 20:23",
-                status: "sent"
-            },
+            // {
+            //     by: "Afroz Hussain",
+            //     to: "AICTE Admins",
+            //     date: "21/01/2019 20:23",
+            //     status: "sent"
+            // },
+            // {
+            //     by: "Ryan Nathaniel Mathew",
+            //     to: "Admission department",
+            //     date: "21/01/2019 20:23",
+            //     status: "sent"
+            // },
+            // {
+            //     by: "Musthaq Ahamad",
+            //     to: "Department CSE",
+            //     date: "21/01/2019 20:23",
+            //     status: "sent"
+            // },
+            // {
+            //     by: "Rumaan Khalander",
+            //     to: "Electronics Department",
+            //     date: "21/01/2019 20:23",
+            //     status: "sent"
+            // },
         ]
     }
 

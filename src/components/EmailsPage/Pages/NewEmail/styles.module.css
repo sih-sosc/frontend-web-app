@@ -81,7 +81,10 @@
     border: 0;
     margin: 10px;
 }
-
+.schedule{
+    display: flex;
+    flex-direction: row;
+}
 .button:hover {
     box-shadow: 0 2px 6px 0 rgba(1, 209, 29, 0.438);
     cursor: pointer;
