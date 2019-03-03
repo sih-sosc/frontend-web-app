@@ -19,6 +19,7 @@ class NewEmailsPage extends Component {
             date: new Date(),
             schedule: "right_now",
             contacts: null,
+            listname:"",
             emailbody: "",
             emailsubject: "",
             email:"",
@@ -80,7 +81,12 @@ class NewEmailsPage extends Component {
         rows.forEach(element => {
             contacts.push(<option>{element.name}</option>)
         });
-        return (<select className={Styles.dropDown}>
+        return (<select className={Styles.dropDown} onChange={(e)=>{
+            this.setState({
+                listname:e.target.value,
+
+            })
+        }}>
             <option disabled selected>Choose Contact List</option>
             {contacts}
 
@@ -97,6 +103,7 @@ class NewEmailsPage extends Component {
         let emailsubject = this.state.emailsubject;
         var token = localStorage.getItem('token');
         let url = `http://172.17.104.204:8080/send?email_body=${emailbody}&email_subject=${emailsubject}`;
+        let listname=this.state.listname;
         // axios.get(url, {
         //     data:{
         //         email_body: emailbody,
@@ -113,9 +120,14 @@ class NewEmailsPage extends Component {
         //     }
         // })
 
-        axios.post("http://172.17.104.204:8080/send?email_subject=test", {
+        axios.post("http://172.17.104.204:3000/send_email", {
+           "token":token,
+            "serviceName":"Bhandary",
+            "auth_key":"SIH",
             "email_subject": emailsubject,
             "email_body": emailbody,
+            "listname":listname,
+  
         });
         // axios  . .,/.get("http://172.17.104.204:8080/send",{
         //     data:{
